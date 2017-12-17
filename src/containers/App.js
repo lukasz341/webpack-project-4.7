@@ -3,6 +3,8 @@ import uuid from 'uuid';
 import style from './App.css';
 import Title from '../components/Title.js';
 import TodoList from '../components/TodoList.js';
+import TodoForm from '../components/TodoForm.js';
+
 
 class App extends React.Component {
     constructor(props){
@@ -20,7 +22,9 @@ class App extends React.Component {
                 }]
         };
         this.removeTodo = this.removeTodo.bind(this);
+        this.addTodo = this.addTodo.bind(this);
     }
+    
     addTodo(val){
         const todo = {
             text: val,
@@ -39,7 +43,9 @@ class App extends React.Component {
         return (
             <div className={style.TodoApp}>
                 <Title title="Aplikacja ToDo" todonumbers={this.state.data.length}/> 
+                <TodoForm addTodo={this.addTodo}/>
                 <TodoList data={this.state.data} removeTodo={this.removeTodo} />
+                
                
                 
                 

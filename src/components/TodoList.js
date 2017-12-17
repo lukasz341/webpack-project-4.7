@@ -4,7 +4,7 @@ import Todo from './Todo.js';
 
 class TodoList extends React.Component {
     get data() {
-        return this.props.data.map(element => <Todo remove={this.props.removeTodo(element.id)} key={element.id} element={element.text}/> );
+        return this.props.data.map(element => <Todo remove={() => this.props.removeTodo(element.id)} key={element.id} element={element.text}/> );
       }
      
     render() {
