@@ -5,7 +5,6 @@ import Title from '../components/Title.js';
 import TodoList from '../components/TodoList.js';
 import TodoForm from '../components/TodoForm.js';
 
-
 class App extends React.Component {
     constructor(props){
         super(props);
@@ -44,13 +43,7 @@ class App extends React.Component {
             <div className={style.TodoApp}>
                 <Title title="Aplikacja ToDo" todonumbers={this.state.data.length}/> 
                 <TodoForm addTodo={this.addTodo}/>
-                <TodoList data={this.state.data} removeTodo={this.removeTodo} />
-                
-               
-                
-                
-               
-
+                <TodoList data={this.state.data} removeTodo={this.removeTodo} />            
             </div>
         );
     }

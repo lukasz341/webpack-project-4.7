@@ -2,21 +2,24 @@ import React from 'react';
 
 class TodoForm extends React.Component {
 
-
+    addTask(event) { 
+      //  let wpisz= 'zadanie1'; 
+      let wartosc = event.target.value; 
+        event.preventDefault();
+        this.props.addTodo(wartosc);
+    }
 
     render() {
         return (
-            
-            <form>
-                <input type={"text"} placeholder={"wpisz tekst"} value={'Zadanie1'}/>
-                <button onClick={this.props.addTodo} type="submit">
+            <div>
+                <form>
+                     <input type="text" placeholder="wpisz tekst" value="tata1"  />
+                </form>
+                <button onClick={(event) => this.addTask(event)}>
                     Dodaj zadanie
-                </button>
-                  
-            </form>
-            
+                </button>          
+            </div>           
         );
     }
 }
-
 export default TodoForm;
