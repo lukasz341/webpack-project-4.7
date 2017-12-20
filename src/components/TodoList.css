@@ -9,3 +9,11 @@ ol li {
 ol li:hover {
     cursor: pointer;
 }
+input {
+    padding: 5px;
+}
+button {
+    padding: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}

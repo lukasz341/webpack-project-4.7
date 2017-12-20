@@ -1,10 +1,11 @@
 import React from 'react';
+import style from './TodoList.css';
 
 class TodoForm extends React.Component {
 
     addTask(event) { 
-      //  let wpisz= 'zadanie1'; 
-      let wartosc = event.target.value; 
+     
+      let wartosc = document.querySelector('input').value 
         event.preventDefault();
         this.props.addTodo(wartosc);
     }
@@ -13,7 +14,7 @@ class TodoForm extends React.Component {
         return (
             <div>
                 <form>
-                     <input type="text" placeholder="wpisz tekst" value="tata1"  />
+                     <input type="text" placeholder="wpisz tekst"  />
                 </form>
                 <button onClick={(event) => this.addTask(event)}>
                     Dodaj zadanie
